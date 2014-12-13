@@ -1,0 +1,37 @@
+body {
+  font-family: "Fanwood Regular", "Didot Regular", "Book Antiqua", "Times", "Times New Roman", serif;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 150%;
+  background: $pastel-yellow;
+  color: $dark-grey;
+}
+
+section { padding: 40px; }
+
+h1 {
+  border-bottom: 3px solid $lavender;
+  width: 50%;
+  + p { width: 75%; }
+}
+
+em {
+  font-family: "Fanwood Regular";
+  font-style: italic;
+}
+
+img {
+  border: 1px solid $pastel-yellow;
+  width: 182px;
+  float: right;
+  @include border-radius(50%, 50%);
+  @include box-shadow($lavender-rgba 0 0 0 4px);
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 2px solid $lavender;
+  color: $link;
+  transition: all 0.5s ease;
+  &:hover { background: $wheat; }
+}

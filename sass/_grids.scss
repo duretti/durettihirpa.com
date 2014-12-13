@@ -1,0 +1,26 @@
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+.container {
+  @include container;
+  @include clearfix;
+}
+
+.one {
+  @include span(1 of 10);
+}
+.two {
+  @include span(6 of 10);
+  @include clearfix;
+}
+.three {
+  @include span(1 of 10 last);
+}
+
+.half {
+  @include span(8 of 10);
+  @include clearfix;
+}
