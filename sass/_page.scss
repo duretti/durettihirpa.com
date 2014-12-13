@@ -1,3 +1,7 @@
+// I should probably pick a better breakpoint.
+
+$tablet : 768px;
+
 body {
   font-family: "Fanwood Regular", "Didot Regular", "Book Antiqua", "Times", "Times New Roman", serif;
   font-style: normal;
@@ -12,13 +16,14 @@ section { padding: 40px; }
 h1 {
   border-bottom: 3px solid $lavender;
   width: 50%;
+  @media screen and (max-width: $tablet) {
+    width: auto;
+    line-height: 120%;
+  }
   + p { width: 75%; }
 }
 
-em {
-  font-family: "Fanwood Regular";
-  font-style: italic;
-}
+em { font-style: italic; }
 
 img {
   border: 1px solid $pastel-yellow;
@@ -26,6 +31,7 @@ img {
   float: right;
   @include border-radius(50%, 50%);
   @include box-shadow($lavender-rgba 0 0 0 4px);
+  @media screen and (max-width: $tablet) { float: none; }
 }
 
 a {
